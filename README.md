@@ -1,1 +1,7 @@
-# cs-vs-ssr-sbqs-2025
+# Client-Side vs Server-Side Rendering: Impacts on Performance and User Experience in Web Applications
+
+## Abstract
+With the expansion of digital platforms there is an increasing demand for efficient and high-performance web applications. Two main approaches for rendering web pages, Client-Side Rendering (CSR) and Server-Side Rendering (SSR), raise important questions about which one offers the best user experience and the highest efficiency in terms of performance and computational costs. This work investigates and compares the efficiency and performance between CSR and SSR in web applications, focusing on the impact on performance, computational costs, and user experience, measured through Google's Core Web Vitals (CWV) metrics.
+Tests indicated statistically significant differences between measures. One of the hypotheses raised is that CSR rendering provides better performance in metrics related to visible content loading, such as FCP and SI, while SSR rendering performs better in metrics related to interactivity and the loading of the largest page content, such as TTI and LCP. The results suggest that the choice between CSR and SSR should consider the application's specific objectives and usage environment.
+
+**This repository contains all the codes developed in the project**

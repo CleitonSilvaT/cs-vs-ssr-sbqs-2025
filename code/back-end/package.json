@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "generate-json": "cd ./scripts && node generateJson.mjs",
+    "start": "node index.mjs",
+    "performance": "node ./scripts/performance-test.mjs"
+  },
+  "dependencies": {
+    "chrome-launcher": "^1.1.2",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "lighthouse": "^12.2.0",
+    "node-fetch": "^3.3.2",
+    "pdfkit": "^0.15.0",
+    "puppeteer": "^23.2.1"
+  }
+}

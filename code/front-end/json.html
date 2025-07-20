@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side Rendering</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #result {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .user-section {
+            margin-bottom: 50px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .user-info img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .user-info h2 {
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .posts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .total-likes {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e0245e;
+            text-align: center;
+        }
+
+      </style>
+    </head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const size = params.get('size');
+
+        fetch(`http://localhost:3000/data?size=${size}&format=json`)
+            .then(response => response.json())
+            .then(data => {
+                let formattedJson = ``;
+                data.forEach(user => {
+                    let totalLikes = 0;
+
+                    formattedJson += `<div class="user-section">
+                                        <div class="user-info">
+                                            <img src="${user.avatar_url}" alt="${user.username}'s avatar" loading="lazy">
+                                            <h2>${user.username}</h2>
+                                        </div>
+                                        <div class="posts-container">`;
+                    
+                    user.posts.forEach(post => {
+                        totalLikes += post.likes.length;
+                        formattedJson += `<div class="post-card">
+                                            <img src="${post.image_url}" alt="Post image"/>
+                                          </div>`;
+                    });
+                    
+                    formattedJson += `</div>
+                                      <div class="total-likes">❤️ Curtidas: ${totalLikes} likes</div>
+                                      </div> `;
+                });
+                
+                document.getElementById('result').innerHTML = formattedJson;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

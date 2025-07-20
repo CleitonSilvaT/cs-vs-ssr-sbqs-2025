@@ -1,0 +1,85 @@
+Atributo,Size,JSON,HTML
+Score,extra-small,82,84
+Score,small,70,83
+Score,medium,41,43
+Score,large,68,36
+Score,extra-large,35,64
+,,,
+LCP,extra-small,5.0 s,4.4 s
+LCP,small,11.6 s,4.2 s
+LCP,medium,70.2 s,13.9 s
+LCP,large,0.8 s,28.6 s
+LCP,extra-large,336.6 s,0.8 s
+,,,
+FID,extra-small,40 ms,30 ms
+FID,small,140 ms,150 ms
+FID,medium,"1,620 ms","1,660 ms"
+FID,large,"2,350 ms","8,450 ms"
+FID,extra-large,"10,000 ms","4,060 ms"
+,,,
+CLS,extra-small,0,0
+CLS,small,0,0
+CLS,medium,0,0
+CLS,large,0,0
+CLS,extra-large,0,0
+,,,
+FCP,extra-small,0.6 s,0.6 s
+FCP,small,0.6 s,0.6 s
+FCP,medium,0.6 s,0.6 s
+FCP,large,0.6 s,0.6 s
+FCP,extra-large,0.7 s,0.6 s
+,,,
+SI,extra-small,2.1 s,3.1 s
+SI,small,3.4 s,3.2 s
+SI,medium,5.6 s,4.7 s
+SI,large,4.1 s,9.3 s
+SI,extra-large,26.2 s,6.8 s
+,,,
+TTI,extra-small,5.0 s,4.4 s
+TTI,small,11.6 s,4.2 s
+TTI,medium,70.2 s,13.9 s
+TTI,large,5.1 s,28.6 s
+TTI,extra-large,336.6 s,8.5 s
+,,,
+User CPU(%),extra-small,12.03,34.21
+User CPU(%),small,21.84,32.73
+User CPU(%),medium,50.24,50.23
+User CPU(%),large,23.63,44.65
+User CPU(%),extra-large,46.49,35.40
+,,,
+System CPU(%),extra-small,1.18,3.15
+System CPU(%),small,2.24,3.40
+System CPU(%),medium,5.16,4.64
+System CPU(%),large,1.93,4.71
+System CPU(%),extra-large,6.55,4.39
+,,,
+Memory RSS(KB),extra-small,310,298
+Memory RSS(KB),small,429,404
+Memory RSS(KB),medium,975,951
+Memory RSS(KB),large,407,1578
+Memory RSS(KB),extra-large,2547,1887
+,,,
+Heap Total(KB),extra-small,183,171
+Heap Total(KB),small,304,278
+Heap Total(KB),medium,833,795
+Heap Total(KB),large,860,1365
+Heap Total(KB),extra-large,2458,1819
+,,,
+Heap Used(KB),extra-small,113,113
+Heap Used(KB),small,271,201
+Heap Used(KB),medium,800,763
+Heap Used(KB),large,829,1322
+Heap Used(KB),extra-large,2357,1747
+,,,
+JS Heap Used Size(KB),extra-small,636,1096
+JS Heap Used Size(KB),small,3414,635
+JS Heap Used Size(KB),medium,634,633
+JS Heap Used Size(KB),large,6883,633
+JS Heap Used Size(KB),extra-large,634,633
+,,,
+JS Heap Total Size(KB),extra-small,3488,2720
+JS Heap Total Size(KB),small,7408,3232
+JS Heap Total Size(KB),medium,1952,1696
+JS Heap Total Size(KB),large,8400,1952
+JS Heap Total Size(KB),extra-large,1952,1696
+,,,

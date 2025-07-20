@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Data</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5500/front-end/main.css" >
+</head>
+<body>
+    <div class="container">
+        <h1>Selecionar renderização e tamanho dos dados</h1>
+        <form id="dataForm">
+            <div class="select-group">
+                <label for="size">Selecione o tamanho dos dados:</label>
+                <select id="size" name="size">
+                    <option value="extra-small">Extra Small</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="format">Selecione o tipo de renderização:</label>
+                <select id="format" name="format">
+                    <option value="json">Client Side</option>
+                    <option value="html">Server Side</option>
+                </select>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const size = document.getElementById('size').value;
+            const format = document.getElementById('format').value;
+
+            if (format === 'json') {
+                window.location.href = `json.html?size=${size}`;
+            } else {
+                window.location.href = `http://localhost:3000/data?size=${size}&format=html`;
+            }
+        });
+    </script>
+</body>
+</html>
